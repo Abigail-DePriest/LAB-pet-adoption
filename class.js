@@ -9,19 +9,58 @@ const pies = [{
 
 }]
 
-const app = document.querySelector("#app")
+const renderToDom = (array) => {
+  let domString = ""
+    array.forEach( (object) => ) {
 
-let domString = ""
+      domString+= `<div class="card" style="width: 18rem;">
+      <img src="..." class="card-img-top" alt="...">
+      <div class="card-body">
+       <h5 class="card-title"> ${object.name}</h5>
+        <p class="card-text"> ${object.numberOfEggs}</p>
+       <a href="#" class="btn btn-primary">Go somewhere</a>
+      </div>
+      </div>`
 
-for (pie of pies) {
-  domString += `<div class="card" style="width: 18rem;">
-<img src="..." class="card-img-top" alt="...">
-<div class="card-body">
-  <h5 class="card-title"> ${pie.name}</h5>
-  <p class="card-text"> ${pie.numberOfEggs}</p>
-  <a href="#" class="btn btn-primary">Go somewhere</a>
-</div>
-</div>`
- }
 
-  app.innerHTML = domString
+
+    }
+
+const app= document.querySelector("#app")
+app.innerHTML = domString
+
+
+
+}
+
+renderToDom(pies)
+    
+const catButton = document.querySelector(#cats)
+const filer = () => {
+    let newPieArray = []
+
+    for (pie of pies) {
+      if (pie.vegan === true) {
+        newPieArray.push(pie)
+      }
+    }
+
+    renderToDom(veganPieArray)
+}
+catButton.addEventListener(eventType, function)
+
+
+//let domString = ""
+
+//for (pie of pies) {
+ //domString += `<div class="card" style="width: 18rem;">
+//<img src="..." class="card-img-top" alt="...">
+//<div class="card-body">
+ //<h5 class="card-title"> ${pie.name}</h5>
+  //<p class="card-text"> ${pie.numberOfEggs}</p>
+// <a href="#" class="btn btn-primary">Go somewhere</a>
+//</div>
+//</div>`
+ //}
+
+ // app.innerHTML = domString
