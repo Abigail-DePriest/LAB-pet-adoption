@@ -241,10 +241,20 @@ const pets = [
     }
   ];
 
-  const appDiv= document.querySelector("#app")
 
-  let domString = ""
-  for( let i = 0; i < pets.length; i++) {
+ 
+  const appDiv= document.querySelector("#app")
+ 
+ 
+
+
+//////////////////////
+
+
+ const renderToDom = (pets) => {
+  let domString = "";
+
+ for( let i = 0; i < pets.length; i++) {
     domString +=  ` <div class="card border-success mb-3" style="max-width: 18rem;">
     <div class="card-header bg-transparent border-success">${pets[i].name}</div>
     <div class="card-body text-success">
@@ -257,12 +267,68 @@ const pets = [
    `
   }
 
+  appDiv.innerHTML = domString
 
- appDiv.innerHTML = domString
+
+
+
+
+}
+
+renderToDom(pets)
+    
+const catButton = document.querySelector("#cats");
+const dogButton = document.querySelector("#dogs");
+const dinoButton = document.querySelector("#dinos");
+const showAllButton = document.querySelector("#showAll");
+
+const filter = (pets, type) => {
+    let newPetArray = []
+
+    for (pet of pets) {
+      if (pet.type === type ) {
+        
+        newPetArray.push(pet)
+      }
+
+      
+    }
+
+    renderToDom(newPetArray)
+}
+
+// create an event listener for when the cat button is clicked
+
+catButton.addEventListener("click", () => {
+     filter (pets, "cat");
+    renderToDom(newPetArray);
+})
+
+dogButton.addEventListener("click", () => {
+  filter (pets, "dog");
+ renderToDom(newPetArray);
+})
+
+dinoButton.addEventListener("click", () => {
+  filter (pets, "dino");
+ renderToDom(newPetArray);
+})
+
+showAllButton.addEventListener("click", () => {
+ 
+ renderToDom(pets);
+})
+
+
+
+
+
+
+ 
+
  
 
 
 
  
    
-petCards.innerHTML = petArray;
