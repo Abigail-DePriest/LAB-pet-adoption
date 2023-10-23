@@ -1,15 +1,43 @@
  
- .petButtons {
-  display: inline-block;
-  text-align: center;
-  margin: 0 auto;
+body {
 
- }
+  background-color: pink;
+}
+
+
+.button-container {
+
+ text-align: center;
+ 
+ 
+}
+
+
+
+
+#app {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 20px;
+  justify-content: space-evenly;
+}
+
 
  img {
 
   width: 100%;
+  
  }
- 
+
+
+ #submit {
+  
+  background-color: orangered;
+ }
+
+
+.btn-outline-submit {
+  background-color: yellowgreen;
+}
  
  
