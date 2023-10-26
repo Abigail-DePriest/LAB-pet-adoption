@@ -1,43 +1,96 @@
  
 body {
-
+  
   background-color: pink;
+}
+
+.card {
+  
+  display:  flex;
+}
+
+.card-body {
+
+  text-align: left;
+  margin-bottom: 2px;
+
+
+}
+
+.card-text {
+  display: block;
+  height: 50px;
+ 
+  
+  
 }
 
 
 .button-container {
 
  text-align: center;
+ font-weight: bolder;
+ margin: 20px;
  
  
 }
+#cats {
+  background-color: rebeccapurple;
+}
 
+#dogs {
+  background-color: orangered;
+}
+
+#dinos {
+  background-color: olivedrab;
+}
+
+#showAll {
+  background-color: yellow;
+}
 
 
 
 #app {
   display: flex;
   flex-wrap: wrap;
+  
   margin: 20px;
+  padding: auto;
   justify-content: space-evenly;
 }
 
 
- img {
+
+
+
+
+
+
+img {
 
   width: 100%;
+  height: 50%;
+  object-fit: cover;
   
  }
 
 
- #submit {
+
+
+#delete {
+  background-color: orange;
+  margin: auto;
+  margin-top: 15px;
   
-  background-color: orangered;
- }
+  
+}
 
 
 .btn-outline-submit {
   background-color: yellowgreen;
+  margin: 20px;
 }
  
  
